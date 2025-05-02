@@ -1,13 +1,15 @@
 {
-    'name': 'CRM Product/Course Required',
+    'name': 'CRM Product/Course Required by Stage',
     'version': '1.0',
     'category': 'Sales/CRM',
-    'summary': 'Make Course field required in CRM',
+    'summary': 'Make Course field required based on CRM stage',
     'description': """
-        This module makes the course field required in CRM leads/opportunities.
+        This module allows users to configure which CRM stages require a course field,
+        without needing code changes.
     """,
     'depends': ['crm'],
     'data': [
+        'views/crm_stage_views.xml',
         'views/crm_lead_views.xml',
     ],
     'installable': True,
