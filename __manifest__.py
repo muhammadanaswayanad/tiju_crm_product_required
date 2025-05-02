@@ -1,5 +1,5 @@
 {
-    'name': 'CRM Product/Course Required by Stage',
+    'name': 'CRM Course Required by Stage',
     'version': '1.0',
     'category': 'Sales/CRM',
     'summary': 'Make Course field required based on CRM stage',
