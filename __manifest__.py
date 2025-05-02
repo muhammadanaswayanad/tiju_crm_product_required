@@ -7,7 +7,7 @@
         This module allows users to configure which CRM stages require a course field,
         without needing code changes.
     """,
-    'depends': ['crm'],
+    'depends': ['crm', 'product'],
     'data': [
         'views/crm_stage_views.xml',
         'views/crm_lead_views.xml',
