@@ -5,10 +5,8 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
-            <!-- Find the product_id field and modify its attrs -->
-            <xpath expr="//field[@name='product_id']" position="attributes">
-                <attribute name="attrs">{'required': [('stage_id.name', 'in', ['NI', 'NP', 'FP', 'P', 'HP', 'A', 'LOST'])]}</attribute>
-                <attribute name="string">Course</attribute>
+            <xpath expr="//field[@name='course_id']" position="attributes">
+                <attribute name="required">1</attribute>
             </xpath>
         </field>
     </record>
