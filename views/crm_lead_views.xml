@@ -8,7 +8,7 @@
             <!-- Use a more reliable XPath that finds the first page in the notebook -->
             <xpath expr="//notebook//page[1]" position="inside">
                 <group>
-                    <field name="course_id" attrs="{'required': [('stage_id.course_required', '=', True)]}"/>
+                    <field name="course_id" required="context.get('enforce_course_required', False)"/>
                 </group>
             </xpath>
         </field>
