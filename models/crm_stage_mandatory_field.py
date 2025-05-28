@@ -27,5 +27,3 @@ class CrmStageMandatoryField(models.Model):
         for record in self:
             if record.field_id and record.field_id.name == 'stage_id':
                 raise models.ValidationError("The 'Stage' field itself cannot be selected as a mandatory field through this configuration.")
-
-```
