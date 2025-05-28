@@ -3,5 +3,9 @@ from odoo import fields, models
 class CrmStage(models.Model):
     _inherit = 'crm.stage'
 
-    course_required = fields.Boolean(string="Course Mandatory in this Stage?", default=False,
-                                     help="If checked, the course field will be required for leads in this stage")
+    mandatory_field_configs = fields.One2many(
+        'crm.stage.mandatory.field',
+        'stage_id',
+        string="Mandatory Fields for this Stage",
+        help="Configure fields that must be filled when an opportunity is in this stage."
+    )

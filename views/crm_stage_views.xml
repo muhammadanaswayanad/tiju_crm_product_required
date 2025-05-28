@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="crm_stage_form_view_inherit" model="ir.ui.view">
-        <field name="name">crm.stage.form.inherit.course.required</field>
+        <field name="name">crm.stage.form.inherit.mandatory.fields</field>
         <field name="model">crm.stage</field>
         <field name="inherit_id" ref="crm.crm_stage_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='fold']" position="after">
-                <field name="course_required"/>
+                <!-- <field name="course_required"/> -->
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Mandatory Fields" name="mandatory_fields">
+                        <field name="mandatory_field_configs">
+                            <tree editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="field_id" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="field_technical_name" readonly="1"/>
+                            </tree>
+                        </field>
+                         <group>
+                            <p class="oe_grey">
+                                Configure fields that must be filled when an opportunity reaches this stage.
+                                Users will be prevented from saving an opportunity in this stage if any of these fields are empty.
+                                Ensure the selected fields are visible on the Opportunity form view.
+                            </p>
+                        </group>
+                    </page>
+                </notebook>
             </xpath>
         </field>
     </record>

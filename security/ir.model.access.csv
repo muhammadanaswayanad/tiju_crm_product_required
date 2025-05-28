@@ -1,1 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_stage_mandatory_field_user,crm.stage.mandatory.field.user,model_crm_stage_mandatory_field,base.group_user,1,0,0,0
+access_crm_stage_mandatory_field_sales_manager,crm.stage.mandatory.field.sales.manager,model_crm_stage_mandatory_field,sales_team.group_sale_manager,1,1,1,1
